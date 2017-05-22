@@ -11,13 +11,18 @@ function [ p ] = explained_variance( L, Var )
 %       o p      : optimal principal components wrt. explained variance
 
 
-% ====================== Implement Eq. 8 Here ====================== 
+% Calculate percentage of explained variance Var by normalizing the
+% eigenvalues
+eig_vals = diag(L);
+eig_vals = eig_vals ./ sum(eig_vals);
 
 
-% ====================== Implement Eq. 9 Here ====================== 
- 
+% Percentage of dataset covered by i-th projection
+cum_expl_var = cumsum(eig_vals);
 
-% ====================== Implement Eq. 10 Here ====================== 
+
+% Choose p wrt. the Desired Explained Variance
+p = size(cum_expl_var, 1) - sum(cum_expl_var > Var) + 1;
 
 
 % Visualize Explained Variance from Eigenvalues

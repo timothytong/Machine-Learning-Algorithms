@@ -5,7 +5,7 @@
 clear all;
 close all;
 clc;
-ml_toolbox_path = 'Write your ML_toolbox-master path here';
+ml_toolbox_path = '../../../ML_Toolbox/';
 
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%               Load 9D PCA Testing Dataset                  %%

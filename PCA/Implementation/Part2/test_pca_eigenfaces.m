@@ -9,7 +9,7 @@ close all;
 clc;
 
 % Dataset Path
-dataset_path = '../../TP1-PCA-Dataset/Faces/';
+dataset_path = '../../Datasets/Faces/';
 
 % Load 2D Testing Dataset for PCA
 load(strcat(dataset_path,'Yale_32x32.mat'))

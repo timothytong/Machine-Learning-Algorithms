@@ -7,7 +7,7 @@
 % 1a) Load 2D data sampled from a GMM
 clear all; close all; clc;
 
-load('../../TP2-KMeans-Datasets/2d-gmm-4.mat')
+load('../../Datasets/2d-gmm-4.mat')
 
 % Visualize Dataset
 options.class_names = {};
@@ -22,7 +22,7 @@ ml_plot_sigma (gmm, colors, 10);
 %% 1b) Load 2d Ripley Dataset
 clear all; close all; clc;
 
-load('../../TP2-KMeans-Datasets/2d-ripley.mat')
+load('../../Datasets/2d-ripley.mat')
 
 % Visualize Dataset
 options.class_names = {};
@@ -45,7 +45,7 @@ check_mydistance(X);
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clc;
-K = 4; init = 'random'; 
+K = 3; init = 'random'; 
 Mu =  kmeans_init(X, K, init);
 
 % Visualize Centroids
@@ -62,7 +62,7 @@ ml_plot_centroid(Mu',colors);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Default Init Values to Check my_distX2Mu.m
-K = 4; init = 'random';
+K = 3; init = 'random';
 Mu =  kmeans_init(X, K, init);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
